@@ -1,10 +1,9 @@
 //DAY 8 OF HACKERRANK 30 DAY CHALLENGE: DICTIONARIES AND MAPS (JAVA)
 //NOTE: The name of the class was changed for organization.
 
-//Complete this code or write your own from scratch
 import java.util.*;
 
-class Solution{
+class Day8{
     public static void main(String []args){
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
