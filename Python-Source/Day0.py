@@ -1,4 +1,4 @@
-# DAY 1 OF HACKERRANK 30 DAY CHALLENGE (PYTHON)
+# DAY 0 OF HACKERRANK 30 DAY CHALLENGE: HELLO, WORLD (PYTHON)
 
 # Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
 input_string = input()
