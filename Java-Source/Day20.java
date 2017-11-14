@@ -1,5 +1,6 @@
 //DAY 20 OF HACKERRANK 30 DAY CHALLENGE: SORTING (JAVA)
 
+//NOTE: Exercise requires using Bubble Sort.
 import java.util.*;
 
 public class Day20 {
