@@ -1,19 +1,18 @@
-//DAY 22 OF HACKERRANK 30 DAY CHALLENGE: BINARY SEARCH TREES (JAVA)
-//NOTE: Node class refactored to TreeNode to prevent duplicates from previous challenges.
+//DAY 22 OF HACKERRANK 30 DAY CHALLENGE: BINARY TREE CHALLENGE (JAVA)
+//NOTE: Node class was changed to BTreeNode to prevent overlap from previous classes.
 
 import java.util.*;
 
-class TreeNode {
-    TreeNode left,right;
+class BTreeNode {
+    BTreeNode left,right;
     int data;
-    TreeNode(int data){
+    BTreeNode(int data){
         this.data=data;
         left=right=null;
     }
 }
-
-class Solution {
-    public static int getHeight(TreeNode root){
+class Solution{
+    public static int getHeight(BTreeNode root){
         if (root == null) {
             return -1;
         }
@@ -29,12 +28,12 @@ class Solution {
             return b;
         }
     }
-    public static TreeNode insert(TreeNode root, int data){
+    public static BTreeNode insert(BTreeNode root, int data){
         if(root==null){
-            return new TreeNode(data);
+            return new BTreeNode(data);
         }
         else{
-            TreeNode cur;
+            BTreeNode cur;
             if(data<=root.data){
                 cur=insert(root.left,data);
                 root.left=cur;
@@ -49,7 +48,7 @@ class Solution {
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         int T=sc.nextInt();
-        TreeNode root=null;
+        BTreeNode root=null;
         while(T-->0){
             int data=sc.nextInt();
             root=insert(root,data);
