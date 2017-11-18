@@ -4,7 +4,7 @@ import java.util.*;
 
 class Node {
     int data;
-    Node next;
+    TreeNode next;
     Node(int d) {
         data = d;
         next = null;
@@ -12,23 +12,23 @@ class Node {
 }
 
 public class Day15 {
-    public static  Node insert(Node head,int data) {
-        Node traverser = head;
+    public static TreeNode insert(TreeNode head, int data) {
+        TreeNode traverser = head;
 
         if (head == null) {
-            head = new Node(data);
+            head = new TreeNode(data);
         }
         else {
             while (traverser.next != null) {
                 traverser = traverser.next;
             }
-            traverser.next = new Node(data);
+            traverser.next = new TreeNode(data);
         }
 
         return head;
     }
-    public static void display(Node head) {
-        Node start = head;
+    public static void display(TreeNode head) {
+        TreeNode start = head;
         while(start != null) {
             System.out.print(start.data + " ");
             start = start.next;
@@ -37,7 +37,7 @@ public class Day15 {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        Node head = null;
+        TreeNode head = null;
         int N = sc.nextInt();
 
         while(N-- > 0) {
