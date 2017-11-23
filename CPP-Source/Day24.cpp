@@ -27,21 +27,21 @@ class Solution{
               
               while (traverser->next != NULL) {
                   bool alreadyFound = false;
-                  for (int x = 0; x < alreadyUsed.size(); x++) {
+                  for (unsigned int x = 0; x < alreadyUsed.size(); x++) {
                       if (traverser->next->data == alreadyUsed[x]) {
                           alreadyFound = true;
                       }
                   }
                   
                   if (alreadyFound) {
-                      traverser->next = (traverser->next)->next;
+                      traverser->next = traverser->next->next;
                   }
                   else {
                       vector<int> temp = vector<int>(alreadyUsed.size()+1);
                       for (unsigned int y = 0; y < alreadyUsed.size(); y++) {
                           temp[y] = alreadyUsed[y];
                       }
-                      temp[alreadyUsed.size()] = (traverser->next)->data;
+                      temp[alreadyUsed.size()] = traverser->next->data;
                       alreadyUsed = temp;
                       traverser = traverser->next;
                   }
